@@ -1,0 +1,7 @@
+<div class="dice" (click)="rollDice()">
+  <img [src]="'assets/dice/dice' + getDice(1) + '.png'" alt="Dice 1">
+  <img [src]="'assets/dice/dice' + getDice(2) + '.png'" alt="Dice 2">
+</div>
+<p>Dado 1: {{ getDice(1) }}</p>
+<p>Dado 2: {{ getDice(2) }}</p>
+<p>Total: {{ getDice(1) + getDice(2) }}</p>

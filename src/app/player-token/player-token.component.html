@@ -1,0 +1,5 @@
+<div class="player-token" [style.background-color]="player?.color">
+    <ng-container *ngIf="player">
+        {{ player.name ? player.name.charAt(0) : '' }}
+    </ng-container>
+</div>

@@ -505,3 +505,20 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 	top: 5px;
 }
+
+/* Dados */
+.dice-container {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+  }
+  
+  .dice {
+	width: 80px;
+	height: 80px;
+	background-color: #ccc; /* Color de fondo de los dados */
+	border: 2px solid #000;
+	border-radius: 8px;
+	margin-bottom: 10px;
+  }

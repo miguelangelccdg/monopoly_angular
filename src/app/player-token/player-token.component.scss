@@ -1,14 +1,23 @@
 /* player-token.component.scss */
 
 .player-token {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-  }
-  
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  position: absolute; /* Ajustar posición absoluta para las fichas */
+  background-color: #4CAF50; /* Color de fondo */
+  border: 2px solid #FFFFFF; /* Borde blanco */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Ajustar las posiciones x e y en base a las coordenadas */
+.player-token.ng-star-inserted {
+  left: 0; /* Ajustar según el diseño del tablero */
+  top: 0; /* Ajustar según el diseño del tablero */
+}

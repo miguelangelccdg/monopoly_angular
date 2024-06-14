@@ -1,21 +1,16 @@
-.player {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  
-    input {
-      padding: 5px;
-      font-size: 14px;
-      margin-right: 10px;
-    }
-  
-    button {
-      padding: 8px 12px;
-      font-size: 14px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-  }
-  
+.player-tokens-container {
+  position: relative;
+}
+
+.player-token {
+  position: absolute;
+  width: 30px; /* Ancho de la imagen de la ficha */
+  height: 30px; /* Alto de la imagen de la ficha */
+  text-align: center;
+}
+
+.player-token img {
+  width: 100%; /* Ajusta el tamaño de la imagen según el contenedor */
+  height: 100%; /* Ajusta el tamaño de la imagen según el contenedor */
+  border-radius: 50%; /* Para hacer círculos */
+}

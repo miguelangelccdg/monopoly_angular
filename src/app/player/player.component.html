@@ -1,22 +1,14 @@
-<div class="player">
-    <input type="text" #playerNameInput placeholder="Enter player name">
-    <button (click)="addPlayer(playerNameInput)">Add Player</button>
+<!-- Botón para añadir jugador -->
+<input #playerNameInput type="text" placeholder="Nombre del jugador">
+<button *ngIf="!gameStarted" (click)="addPlayer(playerNameInput)">Add Player</button>
+
+<!-- Mostrar las fichas de los jugadores -->
+<div *ngFor="let player of players">
+  <div [style.left.px]="calculateLeftPosition(player)" [style.top.px]="calculateTopPosition(player)"
+       class="player-token" [style.background]="player.color">
+    {{ player.name.charAt(0) }} <!-- Mostrar la primera letra del nombre del jugador -->
   </div>
-  
-  <app-dice></app-dice>
-  
-  <div *ngFor="let player of players" class="player-info">
-    <h3>{{ player.name }}</h3>
-    <p>Money: ${{ player.money }}</p>
-    <p>Properties:</p>
-    <ul>
-      <li *ngFor="let property of player.properties">{{ property }}</li>
-    </ul>
-  
-    <div class="player-token" [style.background-color]="player.color" [style.left.px]="player.coordinates.x" [style.top.px]="player.coordinates.y">
-      {{ player.name.charAt(0) }}
-    </div>
-  </div>
-  
-  <button (click)="startGame()">Start Game</button>
-  
+</div>
+
+<!-- Botón para iniciar el juego -->
+<button *ngIf="!gameStarted && players.length > 0" (click)="startGame()">Start Game</button>
